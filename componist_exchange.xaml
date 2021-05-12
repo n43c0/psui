@@ -6,5 +6,5 @@ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 xmlns:local="clr-namespace:WpfApplication"
 mc:Ignorable="d"
 Title="MainWindow" Height="768" Width="1024">
-<Label x:Name="label" Content="Powershell downloadbare Version von Powershel UIs. @Componist IT Partner" HorizontalAlignment="Left" Height="24" Margin="20,29,0,0" VerticalAlignment="Top" Width="212"/>
+<Label x:Name="label" Content="Powershell downloadbare Version von Powershel UIs. @Componist IT Partner" HorizontalAlignment="Left" Height="24" Margin="20,29,0,0" VerticalAlignment="Top" Width="800"/>
 </Window>
