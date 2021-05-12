@@ -1,10 +1,39 @@
-<Window x:Class="WpfApplication.MainWindow"
-xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-xmlns:local="clr-namespace:WpfApplication"
-mc:Ignorable="d"
-Title="MainWindow" Height="768" Width="1024">
-  <Label Content="Powershel UIs. @Componist IT Partner" HorizontalAlignment="Left" Margin="25,32,0,0" VerticalAlignment="Top" Width="345"/>
+<Window x:Name="Componist_UserInterface" x:Class="ComponistPOSH.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ComponistPOSH"
+        mc:Ignorable="d"
+        Title="Componist User Interface" Height="458.445" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="593*"/>
+            <ColumnDefinition Width="199*"/>
+        </Grid.ColumnDefinitions>
+        <Menu DockPanel.Dock="Top" Grid.ColumnSpan="2" Margin="0,0,0,400">
+            <MenuItem Header="_Funktionen">
+                <MenuItem x:Name="menuadduser" Header="_Neuen Benutzer anlegen" />
+                <MenuItem Header="_Kalenderfreigaben hinzufügen" />
+                <MenuItem Header="_Kalenderfreigaben bearbeiten" />
+                <MenuItem Header="_Gruppenzugehörigkeit ändern" />
+                <Separator />
+                <MenuItem x:Name="menuappclose" Header="_Schließen" />
+            </MenuItem>
+        </Menu>
+        <Grid x:Name="gridnewuser" HorizontalAlignment="Left" Height="385" Margin="0,32,0,0" VerticalAlignment="Top" Width="792" Grid.ColumnSpan="2" Visibility="Hidden">
+            <ListBox x:Name="grplist" HorizontalAlignment="Left" Height="257" Margin="544,63,0,0" VerticalAlignment="Top" Width="219"/>
+            <TextBox x:Name="displayname" HorizontalAlignment="Left" Height="23" Margin="25,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="345"/>
+            <TextBox x:Name="lastname" HorizontalAlignment="Left" Height="23" Margin="220,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+            <TextBox x:Name="givenname" HorizontalAlignment="Left" Height="23" Margin="25,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+            <Label Content="Anzeigename" HorizontalAlignment="Left" Margin="25,32,0,0" VerticalAlignment="Top" Width="345"/>
+            <Label Content="Vorname" HorizontalAlignment="Left" Margin="25,97,0,0" VerticalAlignment="Top" Width="150"/>
+            <Label Content="Name" HorizontalAlignment="Left" Margin="220,97,0,0" VerticalAlignment="Top" Width="150"/>
+            <TextBox x:Name="adminmail" HorizontalAlignment="Left" Height="23" Margin="25,266,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="345" />
+            <Label Content="Passwort senden an (E-Mail)" HorizontalAlignment="Left" Margin="25,235,0,0" VerticalAlignment="Top" Width="345"/>
+            <Label Content="Gruppenzugehörigkeit" HorizontalAlignment="Left" Margin="544,32,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.057,0.222" Width="219"/>
+            <Button x:Name="createbtn" Content="Benutzer Erstellen" HorizontalAlignment="Left" Margin="614,344,0,0" VerticalAlignment="Top" Width="149" Height="33"/>
+        </Grid>
+
+    </Grid>
 </Window>
